@@ -12,6 +12,10 @@ with open('label_encoder_zim.pkl', 'rb') as le:
 app = Flask(__name__)
 
 @app.route('/')
+def signup():
+    return render_template('signup.html')
+
+@app.route('/landing')
 def landing():
     return render_template('landing.html')
 
